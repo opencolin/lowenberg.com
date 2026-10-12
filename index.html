@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Colin Lowenberg</title>
+  <meta name="description" content="Colin Lowenberg is a developer relations engineer in San Francisco. Twenty years of building networks: wireless, APIs, developer communities, and now AI agents.">
+  <meta name="author" content="Colin Lowenberg">
+  <link rel="canonical" href="https://lowenberg.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lowenberg.com/">
+  <meta property="og:title" content="Colin Lowenberg">
+  <meta property="og:description" content="Developer relations engineer in San Francisco. Twenty years of building networks: wireless, APIs, developer communities, and now AI agents.">
+  <meta property="og:image" content="https://lowenberg.com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@dablclaw">
+  <meta name="twitter:creator" content="@dablclaw">
+  <meta name="theme-color" content="#0f0f0e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f2f0eb" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/colin.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&family=Geist:wght@400..600&family=Geist+Mono:wght@400..500&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (function () {
+      var r = document.documentElement;
+      r.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') r.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Colin Lowenberg",
+    "url": "https://lowenberg.com/",
+    "image": "https://lowenberg.com/assets/colin.jpg",
+    "jobTitle": "Developer Relations Engineer",
+    "address": { "@type": "PostalAddress", "addressLocality": "San Francisco", "addressRegion": "CA", "addressCountry": "US" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "The University of Texas at Austin" },
+    "worksFor": [
+      { "@type": "Organization", "name": "Tenki Cloud" },
+      { "@type": "Organization", "name": "Nebius" },
+      { "@type": "Organization", "name": "Dabl Club", "url": "https://dablclub.com/" }
+    ],
+    "sameAs": [
+      "https://x.com/dablclaw",
+      "https://github.com/opencolin",
+      "https://www.linkedin.com/in/wifi",
+      "https://t.me/colinai",
+      "https://farcaster.xyz/colo",
+      "https://colin.chat"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip" href="#work">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Colin Lowenberg, home">
+        <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <g stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round"><path d="M17 44 L32 19 L47 41 L17 44 L32 32 L47 41"/></g>
+          <g fill="currentColor"><circle cx="17" cy="44" r="4"/><circle cx="32" cy="19" r="4"/><circle cx="47" cy="41" r="4"/><circle cx="32" cy="32" r="3"/></g>
+        </svg>
+        Colin Lowenberg
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#talks">Talks</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav__right">
+        <span class="clock" id="clock" title="Local time in San Francisco">SF <span id="clock-time">--:--</span></span>
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <a class="btn btn--primary btn--small btn--book" href="https://calendar.app.google/Av3pXzUJz33SFM8o8" target="_blank" rel="noopener">Book a call</a>
+        <button class="nav__menu" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#talks">Talks</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://calendar.app.google/Av3pXzUJz33SFM8o8" target="_blank" rel="noopener">Book a call</a></li>
+    </ul>
+    <div class="mobile-nav__meta">
+      <span>San Francisco, California</span>
+      <span>Local time <span id="clock-time-mobile">--:--</span></span>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="hero">
+      <canvas class="hero__canvas" id="network" aria-hidden="true"></canvas>
+      <div class="wrap hero__inner">
+        <div>
+          <p class="eyebrow hero__fade">Developer relations &middot; AI agents &middot; San Francisco</p>
+          <h1 class="hero__title">
+            <span class="hero__line"><span>Colin</span></span>
+            <span class="hero__line"><span>Lowen<em>berg</em></span></span>
+          </h1>
+          <p class="hero__deck hero__fade">
+            <strong>Twenty years of building networks.</strong> First wireless, then APIs, then developer communities, and now AI agents. I help developer platforms earn the builders they deserve.
+          </p>
+          <div class="hero__cta hero__fade hero__fade--late">
+            <a class="btn btn--primary" data-magnetic href="https://calendar.app.google/Av3pXzUJz33SFM8o8" target="_blank" rel="noopener">
+              Book a call
+              <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#work">See the work</a>
+          </div>
+        </div>
+
+        <aside class="hero__card hero__fade hero__fade--late" aria-label="Current roles">
+          <figure class="hero__portrait">
+            <img src="assets/colin.jpg" alt="Colin Lowenberg" width="640" height="640" fetchpriority="high">
+            <figcaption>San Francisco, CA</figcaption>
+          </figure>
+          <div class="hero__now">
+            <p class="eyebrow">Now</p>
+            <ul>
+              <li><span>Developer Relations</span><span>Tenki Cloud</span></li>
+              <li><span>Fellow</span><span>Nebius</span></li>
+              <li><span>Founder</span><span>Dabl Club</span></li>
+              <li><span>Ambassador Captain</span><span>Omi</span></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">Scroll</div>
+    </section>
+
+    <!-- ============ Ledger ============ -->
+    <section class="ledger" aria-label="By the numbers">
+      <div class="wrap">
+        <div class="ledger__grid">
+          <div class="stat">
+            <div class="stat__num" data-count="84000" data-suffix="+">84,000+</div>
+            <div class="stat__label">Builders in Dabl Club</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num" data-count="85000" data-suffix="+">85,000+</div>
+            <div class="stat__label">Newsletter subscribers</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num" data-count="250" data-suffix="+">250+</div>
+            <div class="stat__label">Events produced</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num" data-count="100" data-suffix="+">100+</div>
+            <div class="stat__label">Open-source repositories</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num" data-count="20" data-suffix="+">20+</div>
+            <div class="stat__label">Countries with local clubs</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num" data-count="2">2</div>
+            <div class="stat__label">US patents</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Worked with ============ -->
+    <section class="marquee" aria-label="Companies Colin has worked with">
+      <div class="marquee__track">
+        <ul class="marquee__list">
+          <li>Nebius</li><li>Cisco Meraki</li><li>ConsenSys</li><li>MetaMask</li><li>Accenture</li><li>Tenki</li><li>Omi</li><li>Akash Network</li><li>Polygon</li><li>Ethereum</li><li>Sui</li><li>ElizaOS</li><li>OpenClaw</li><li>Product Hunt</li><li>Sandbox VR</li><li>Coinbase</li><li>Linea</li>
+        </ul>
+        <ul class="marquee__list" aria-hidden="true">
+          <li>Nebius</li><li>Cisco Meraki</li><li>ConsenSys</li><li>MetaMask</li><li>Accenture</li><li>Tenki</li><li>Omi</li><li>Akash Network</li><li>Polygon</li><li>Ethereum</li><li>Sui</li><li>ElizaOS</li><li>OpenClaw</li><li>Product Hunt</li><li>Sandbox VR</li><li>Coinbase</li><li>Linea</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ Now ============ -->
+    <section class="section" id="now">
+      <div class="wrap section__grid">
+        <div class="section__head">
+          <p class="eyebrow">Now</p>
+          <h2 class="section__title">Where the work is <em>today</em></h2>
+          <p class="section__note">Agent infrastructure, GPU cloud tooling, and the people who use both.</p>
+        </div>
+        <div class="section__body">
+          <p class="lede" data-reveal>I spend my time where new infrastructure meets the developers who have to make it work: sandboxes for agents, open-weight inference, and the builder communities that form around both.</p>
+          <ul class="now" data-reveal>
+            <li>
+              <span class="k">Developer Relations</span>
+              <h3><a href="https://tenki.cloud" target="_blank" rel="noopener">Tenki Cloud</a></h3>
+              <p>Disposable microVM sandboxes for AI agents. Cookbooks, SDK docs, n8n nodes, and integrations with Hermes, Orca, and Vercel Eve.</p>
+            </li>
+            <li>
+              <span class="k">Fellow</span>
+              <h3><a href="https://nebius.com" target="_blank" rel="noopener">Nebius</a></h3>
+              <p>Token Factory and AI Cloud tooling: OpenClaw provider plugins, Claude Code skills, Kubernetes toolkits, and workshops for builders.</p>
+            </li>
+            <li>
+              <span class="k">Founder</span>
+              <h3><a href="https://dablclub.com" target="_blank" rel="noopener">Dabl Club</a></h3>
+              <p>The developer relations company. 84,000 builders, city clubs in 20+ countries, bootcamps, demo days, and grant support.</p>
+            </li>
+            <li>
+              <span class="k">Ambassador Captain</span>
+              <h3><a href="https://omi.me" target="_blank" rel="noopener">Omi</a></h3>
+              <p>Open-source AI wearable. Grew the developer community to 8,000+ developers and 1,000+ apps through hackathons and workshops.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Work ============ -->
+    <section class="section" id="work">
+      <div class="wrap section__grid">
+        <div class="section__head">
+          <p class="eyebrow">Work</p>
+          <h2 class="section__title">Four networks, <em>one career</em></h2>
+          <p class="section__note">Wireless infrastructure, API platforms, developer ecosystems, and agents. The medium changes; the job is the same.</p>
+        </div>
+        <div class="section__body">
+          <ol class="timeline">
+            <li class="entry" data-reveal>
+              <div class="entry__when"><b>2020 &mdash; Present</b><span>San Francisco</span></div>
+              <div class="entry__who">
+                <h3><a href="https://dablclub.com" target="_blank" rel="noopener">Dabl Club</a></h3>
+                <p class="entry__role">Founder</p>
+              </div>
+              <div class="entry__what">
+                <p>Workshops and bootcamps on AI agents, payments, and MCP, delivered through a global team of developer relations engineers and a content engine that compounds.</p>
+                <ul class="outcomes">
+                  <li><b>85,000+</b> newsletter subscribers at a 35% open rate</li>
+                  <li><b>100+</b> city leads in a global ambassador program</li>
+                  <li><b>5,000+</b> technical founders educated and advised</li>
+                  <li><b>43,000</b> followers on X built from zero</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="entry" data-reveal>
+              <div class="entry__when"><b>2023 &mdash; 2024</b><span>Remote</span></div>
+              <div class="entry__who">
+                <h3><a href="https://docs.metamask.io/" target="_blank" rel="noopener">ConsenSys</a></h3>
+                <p class="entry__role">Developer Relations Lead, MetaMask</p>
+              </div>
+              <div class="entry__what">
+                <p>Led a team of eight DevRel engineers producing open-source samples, video tutorials, community events, startup support, and developer triage.</p>
+                <ul class="outcomes">
+                  <li>Launched <b>MetaMask Snaps</b>, <b>Linea</b>, the Gas API, Phosphor, and the MetaMask developer portal</li>
+                  <li>Designed a global DevRel strategy reaching <b>50,000+</b> developers</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="entry" data-reveal>
+              <div class="entry__when"><b>2018 &mdash; Present</b><span>San Francisco</span></div>
+              <div class="entry__who">
+                <h3>Independent</h3>
+                <p class="entry__role">Developer relations and product, on contract</p>
+              </div>
+              <div class="entry__what">
+                <dl class="clients">
+                  <div><dt><a href="https://omi.me/" target="_blank" rel="noopener">Omi</a></dt><dd>Grew an open-source community to 8,000+ developers and 1,000+ apps.</dd></div>
+                  <div><dt><a href="https://akash.network/docs/" target="_blank" rel="noopener">Akash Network</a></dt><dd>10x developer growth through monthly hackathons; ran a $3M grant program.</dd></div>
+                  <div><dt><a href="https://www.sentz.com/developers" target="_blank" rel="noopener">Sentz</a></dt><dd>Partnerships, docs, live streams, and a developer portal built on Next.js.</dd></div>
+                  <div><dt><a href="https://nodle.com/" target="_blank" rel="noopener">Nodle</a></dt><dd>Product requirements for an open-source contact tracing app and a Cisco partnership.</dd></div>
+                  <div><dt><a href="https://joinmassive.com/" target="_blank" rel="noopener">Massive</a></dt><dd>Research and business development on AI demand for global proxy networks.</dd></div>
+                  <div><dt><a href="https://ai.cookbook.dev/" target="_blank" rel="noopener">Cookbook</a></dt><dd>Partnerships with ConsenSys, Polygon, and Coinbase.</dd></div>
+                </dl>
+              </div>
+            </li>
+
+            <li class="entry" data-reveal>
+              <div class="entry__when"><b>2015 &mdash; 2018</b><span>San Francisco</span></div>
+              <div class="entry__who">
+                <h3><a href="https://developer.cisco.com/meraki/" target="_blank" rel="noopener">Cisco Meraki</a></h3>
+                <p class="entry__role">Developer Platform</p>
+              </div>
+              <div class="entry__what">
+                <p>Launched Meraki as a platform: the developer portal, the documentation, and the Meraki App Directory.</p>
+                <ul class="outcomes">
+                  <li>API calls from <b>4,000</b> to <b>1,000,000+</b> per day in the first year</li>
+                  <li><b>50+</b> technology partnerships, including Yelp, Google, and Zenreach</li>
+                  <li>Distinguished Speaker Award, Cisco Live 2018</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="entry" data-reveal>
+              <div class="entry__when"><b>2017 &mdash; 2020</b><span>San Francisco</span></div>
+              <div class="entry__who">
+                <h3>Dogtime Community</h3>
+                <p class="entry__role">Founder</p>
+              </div>
+              <div class="entry__what">
+                <p>Dogs on demand. 40,000 installs, a database of 5,000 dog owners, and 2,000 events for universities, senior living communities, and offices. A relaunch as animal-assisted therapy was underway when COVID put a paws on it.</p>
+              </div>
+            </li>
+
+            <li class="entry" data-reveal>
+              <div class="entry__when"><b>2008 &mdash; 2015</b><span>Various</span></div>
+              <div class="entry__who">
+                <h3>Accenture</h3>
+                <p class="entry__role">Wireless and Location Systems Lead</p>
+              </div>
+              <div class="entry__what">
+                <p>Led wireless LAN, Bluetooth, and real-time location systems for Fortune 500 clients.</p>
+                <ul class="outcomes">
+                  <li>Patented a life-safety system for refineries built on Cisco mesh Wi-Fi, RTLS-GPS, and gas sensors</li>
+                  <li>Designed wireless infrastructure for Caesars properties and the American Museum of Natural History</li>
+                  <li>Ken Ernst Award for Strategy &amp; Innovation, 2010</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Projects ============ -->
+    <section class="section" id="projects">
+      <div class="wrap section__grid">
+        <div class="section__head">
+          <p class="eyebrow">Projects</p>
+          <h2 class="section__title">Things I <em>shipped</em></h2>
+          <p class="section__note">Open source first. Agent tooling, GPU cloud integrations, and the occasional coffee mug with opinions.</p>
+        </div>
+        <div class="section__body">
+          <div class="filters" role="group" aria-label="Filter projects">
+            <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-filter="agents" aria-pressed="false">Agents</button>
+            <button class="chip" type="button" data-filter="nebius" aria-pressed="false">Nebius &amp; OpenClaw</button>
+            <button class="chip" type="button" data-filter="infra" aria-pressed="false">Infrastructure</button>
+            <button class="chip" type="button" data-filter="security" aria-pressed="false">Security</button>
+            <button class="chip" type="button" data-filter="community" aria-pressed="false">Community</button>
+            <button class="chip" type="button" data-filter="fun" aria-pressed="false">Fun</button>
+          </div>
+
+          <ul class="projects__grid" id="projects-grid" data-reveal>
+            <li class="project" data-tags="security agents">
+              <a class="project__link" href="https://moltypass.app" target="_blank" rel="noopener">
+                <div class="project__top"><h3>Moltypass</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>moltypass.app</span></div>
+                <p>Open-source encrypted vault for AI provider keys. Browser and terminal, Touch ID, and capture straight from the provider's console.</p>
+                <div class="project__tags"><span>Security</span><span>Agents</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="agents">
+              <a class="project__link" href="https://superslide.fun" target="_blank" rel="noopener">
+                <div class="project__top"><h3>Superslide</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>superslide.fun</span></div>
+                <p>Drop a PPTX, PDF, or Keynote and get it back as an interactive web slideshow built with your brand's design system.</p>
+                <div class="project__tags"><span>Agents</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="agents">
+              <a class="project__link" href="https://github.com/opencolin/ice" target="_blank" rel="noopener">
+                <div class="project__top"><h3>ICE</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>github.com/opencolin/ice</span></div>
+                <p>Open-source collaborative IDE where humans and AI agents code in one shared live workspace. Voice, chat, and its own git server.</p>
+                <div class="project__tags"><span>Agents</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="nebius">
+              <a class="project__link" href="https://github.com/opencolin/openclaw-nebius" target="_blank" rel="noopener">
+                <div class="project__top"><h3>openclaw-nebius</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>github.com/opencolin</span><span class="star">12</span></div>
+                <p>OpenClaw on Nebius: a Token Factory provider plugin for 44+ open models, a deployment UI, and a Claude Code skill.</p>
+                <div class="project__tags"><span>OpenClaw</span><span>Nebius</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="nebius infra">
+              <a class="project__link" href="https://github.com/opencolin/kubeclaw" target="_blank" rel="noopener">
+                <div class="project__top"><h3>kubeclaw</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>github.com/opencolin</span></div>
+                <p>Production toolkit for running OpenClaw and NemoClaw on Nebius Managed Kubernetes: Helm chart, GPU config, monitoring, hardening.</p>
+                <div class="project__tags"><span>OpenClaw</span><span>Kubernetes</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="nebius agents">
+              <a class="project__link" href="https://github.com/opencolin/nebius-skill" target="_blank" rel="noopener">
+                <div class="project__top"><h3>nebius-skill</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>github.com/opencolin</span></div>
+                <p>A skill for Claude Code and OpenClaw that manages Nebius AI Cloud from the command line.</p>
+                <div class="project__tags"><span>Nebius</span><span>Claude Code</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="security community">
+              <a class="project__link" href="https://modelcontextprotocol-security.io" target="_blank" rel="noopener">
+                <div class="project__top"><h3>MCP Security</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>Cloud Security Alliance</span><span class="star">19</span></div>
+                <p>Working group project: audit tooling, a vulnerability database, and guidance for building and operating MCP servers safely.</p>
+                <div class="project__tags"><span>Security</span><span>MCP</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="agents">
+              <a class="project__link" href="https://ixio.com" target="_blank" rel="noopener">
+                <div class="project__top"><h3>ixio</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>ixio.com</span></div>
+                <p>Coding-agent leaderboard that scores interface and compute together, from public benchmarks and sandboxed evaluations.</p>
+                <div class="project__tags"><span>Agents</span><span>Benchmarks</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="nebius agents">
+              <a class="project__link" href="https://github.com/opencolin/claude-codex-nebius-proxy" target="_blank" rel="noopener">
+                <div class="project__top"><h3>claude-codex-nebius-proxy</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>github.com/opencolin</span></div>
+                <p>Bridge from Claude Code and Codex CLI to Nebius. Converts Messages and Responses calls to OpenAI-compatible ones with model routing.</p>
+                <div class="project__tags"><span>Nebius</span><span>Proxy</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="infra">
+              <a class="project__link" href="https://sidecar.network" target="_blank" rel="noopener">
+                <div class="project__top"><h3>Sidecar Network</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>sidecar.network</span></div>
+                <p>A WireGuard relay across five regions. Dedicated IPv6 for every container, no NAT, no bandwidth caps.</p>
+                <div class="project__tags"><span>Networking</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="infra">
+              <a class="project__link" href="https://bastion-bice.vercel.app" target="_blank" rel="noopener">
+                <div class="project__top"><h3>Bastion</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>Fleet control plane</span></div>
+                <p>One screen for live-event connectivity companies: Starlink, Peplink, and Ubiquiti gear, remote access, and white-label SLA reports.</p>
+                <div class="project__tags"><span>Networking</span><span>Events</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="agents infra">
+              <a class="project__link" href="https://sandboxeverything.com" target="_blank" rel="noopener">
+                <div class="project__top"><h3>SandboxEverything</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>sandboxeverything.com</span></div>
+                <p>A browser-based AI workspace for coding, automation, terminals, and local tooling.</p>
+                <div class="project__tags"><span>Agents</span><span>Sandboxes</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="community">
+              <a class="project__link" href="https://claw.camp" target="_blank" rel="noopener">
+                <div class="project__top"><h3>ClawCamp</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>claw.camp</span></div>
+                <p>A global network of AI builder camps: workshops, demo days, and hackathons, with chapters, tutorials, and speakers.</p>
+                <div class="project__tags"><span>Community</span><span>Events</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="agents fun">
+              <a class="project__link" href="https://clawsout.ai" target="_blank" rel="noopener">
+                <div class="project__top"><h3>clawsout</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>clawsout.ai</span></div>
+                <p>Turn any transcript, meeting, or PDF into a realistic multi-host podcast. The comedy dial runs from professional to claws out.</p>
+                <div class="project__tags"><span>Agents</span><span>Audio</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="agents infra">
+              <a class="project__link" href="https://github.com/opencolin/dockingstation" target="_blank" rel="noopener">
+                <div class="project__top"><h3>dockingstation</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>github.com/opencolin</span></div>
+                <p>One container with 30 AI coding tools, a web dashboard, a browser terminal, and a JSON API.</p>
+                <div class="project__tags"><span>Agents</span><span>Docker</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="agents nebius">
+              <a class="project__link" href="https://github.com/opencolin/openengineer" target="_blank" rel="noopener">
+                <div class="project__top"><h3>openengineer</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>github.com/opencolin</span></div>
+                <p>Twelve specialized coding agents for OpenCode, one per AI lab, with cross-session memory and cost tracking on Nebius Token Factory.</p>
+                <div class="project__tags"><span>Agents</span><span>Nebius</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="community">
+              <a class="project__link" href="https://github.com/opencolin/luma-clone" target="_blank" rel="noopener">
+                <div class="project__top"><h3>luma-clone</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>github.com/opencolin</span></div>
+                <p>Open-source, self-hostable event pages, RSVPs, calendars, and discovery. Next.js 16, Drizzle, and libSQL.</p>
+                <div class="project__tags"><span>Community</span><span>Events</span></div>
+              </a>
+            </li>
+            <li class="project" data-tags="fun">
+              <a class="project__link" href="https://github.com/opencolin/muglife" target="_blank" rel="noopener">
+                <div class="project__top"><h3>muglife</h3><svg class="project__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></div>
+                <div class="project__meta"><span>github.com/opencolin</span></div>
+                <p>QR-coded coffee mugs with AI voices that guilt-trip you into bringing them home.</p>
+                <div class="project__tags"><span>Fun</span><span>Voice</span></div>
+              </a>
+            </li>
+          </ul>
+
+          <div class="fleet" data-reveal>
+            <div>
+              <p class="eyebrow">The Fleet</p>
+              <h3>Fifty products, one studio</h3>
+              <p>A 50-startup portfolio on a single platform. Every app gets a branded page, a waitlist, analytics, and a one-command go-live. Six are live on their own domains; the rest are staged.</p>
+            </div>
+            <a class="btn btn--ghost" href="https://dotagent.domains/fleet/" target="_blank" rel="noopener">Browse the directory <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+
+          <div class="projects__more">
+            <span>100+ repositories, from MCP servers to Three.js gardens.</span>
+            <a class="link" href="https://github.com/opencolin" target="_blank" rel="noopener">All of it on GitHub &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Talks & writing ============ -->
+    <section class="section" id="talks">
+      <div class="wrap section__grid">
+        <div class="section__head">
+          <p class="eyebrow">Talks &amp; writing</p>
+          <h2 class="section__title">On stage and <em>on the page</em></h2>
+          <p class="section__note">Workshops, webinars, podcasts, and guides that get developers to a working build.</p>
+        </div>
+        <div class="section__body lists" data-reveal>
+          <div>
+            <h3>Workshops &amp; talks</h3>
+            <ul class="list">
+              <li><a class="t" href="https://nebius.zoom.us/rec/play/E-fy79wopTpnlYXKgOoxgPAguytXEoNVBT98XhX3NbI3o0Kqlx2KPdLuZNoFdGQbSozfST9mZRaVhb2h.tgi4SrhD4TR7Js-6?accessLevel=meeting&amp;canPlayFromShare=true&amp;from=share_recording_detail&amp;continueMode=true&amp;oldStyle=true&amp;componentName=rec-play" target="_blank" rel="noopener">Running OpenClaw on Nebius</a><span class="v">Workshop &middot; Nebius</span><span class="y">2026</span></li>
+              <li><a class="t" href="https://nebius.com/events/webinar-build-an-expert-agentic-slack-bot" target="_blank" rel="noopener">Build an expert agentic Slack bot with OpenClaw, Token Factory, and Tavily</a><span class="v">Webinar &middot; Nebius</span><span class="y">Nebius</span></li>
+              <li><a class="t" href="https://www.youtube.com/watch?v=GtN8JsQfSow" target="_blank" rel="noopener">Omi AI Workshop</a><span class="v">Workshop &middot; Omi</span><span class="y">YouTube</span></li>
+              <li><a class="t" href="https://www.youtube.com/watch?v=SV3gGzs6Ru8" target="_blank" rel="noopener">Omi Workshop at AI in the Physical World</a><span class="v">Workshop &middot; Omi</span><span class="y">YouTube</span></li>
+              <li><a class="t" href="https://www.youtube.com/watch?v=NMLc3vfw9t4" target="_blank" rel="noopener">Dabl Club Dev Camp: Building Agents during EthSF</a><span class="v">Bootcamp &middot; Dabl Club</span><span class="y">YouTube</span></li>
+              <li><a class="t" href="https://www.youtube.com/watch?v=0uN-TPCwtCg" target="_blank" rel="noopener">Hackathon Workshop on Akash</a><span class="v">Workshop &middot; Akash Network</span><span class="y">YouTube</span></li>
+              <li><a class="t" href="https://www.youtube.com/watch?v=W2pVpefAtA8" target="_blank" rel="noopener">Unstoppable Cloud with Skynet and Akash</a><span class="v">Talk &middot; Akash Network</span><span class="y">YouTube</span></li>
+              <li><a class="t" href="https://www.youtube.com/watch?v=rKQG-0lkcRg" target="_blank" rel="noopener">Mr. Beacon Podcast</a><span class="v">Interview</span><span class="y">YouTube</span></li>
+              <li><a class="t" href="https://www.youtube.com/watch?v=G8K0H6OsBes&amp;t=523s" target="_blank" rel="noopener">Meraki is a Platform</a><span class="v">Talk &middot; Cisco Meraki</span><span class="y">YouTube</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Writing</h3>
+            <ul class="list">
+              <li><a class="t" href="https://akash.network/docs/getting-started/quickstart-guides/akash-cli/" target="_blank" rel="noopener">Akash CLI Quickstart Guide</a><span class="v">Docs &middot; Akash Network</span><span class="y">10 min</span></li>
+              <li><a class="t" href="https://akash.network/blog/winners-of-the-akash-solana-hackathon/" target="_blank" rel="noopener">Winners of the Akash Solana Hackathon</a><span class="v">Blog &middot; Akash Network</span><span class="y">5 min</span></li>
+              <li><a class="t" href="https://www.sumologic.com/blog/continuous-intelligence-report-insights-2020" target="_blank" rel="noopener">Continuous Intelligence Report Insights 2020</a><span class="v">Report &middot; Sumo Logic</span><span class="y">8 min</span></li>
+              <li><a class="t" href="https://developer.cisco.com/meraki/" target="_blank" rel="noopener">Meraki Developers</a><span class="v">Publication &middot; Cisco</span><span class="y">2016</span></li>
+            </ul>
+            <h3 style="margin-top:2.5rem">Recognition</h3>
+            <ul class="list">
+              <li><span class="t">Distinguished Speaker Award</span><span class="v">Cisco Live</span><span class="y">2018</span></li>
+              <li><span class="t">New Product of the Year</span><span class="v">Occupational Health &amp; Safety</span><span class="y">2012</span></li>
+              <li><span class="t">Technological Advisory Council, M2M Working Group</span><span class="v">FCC</span><span class="y">2012</span></li>
+              <li><span class="t">Nominee, Best Use of GPS or Location Technology</span><span class="v">The Webby Awards</span><span class="y">2011</span></li>
+              <li><span class="t">Ken Ernst Award for Strategy &amp; Innovation</span><span class="v">Accenture</span><span class="y">2010</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Events ============ -->
+    <section class="section" id="events">
+      <div class="wrap section__grid">
+        <div class="section__head">
+          <p class="eyebrow">Events</p>
+          <h2 class="section__title">Rooms full of <em>builders</em></h2>
+          <p class="section__note">A selection from the last two years. Most of it at Frontier Tower in San Francisco.</p>
+        </div>
+        <div class="section__body" data-reveal>
+          <div class="table-wrap">
+            <table class="ledger-table">
+              <thead>
+                <tr><th scope="col">Event</th><th scope="col">Where</th><th scope="col">When</th><th scope="col" class="num">Attendance</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="name"><a href="http://dablclub.com/tour" target="_blank" rel="noopener">Polygon DevX Tour</a></td><td>Global tour</td><td class="when">2024</td><td class="num">1,000+</td></tr>
+                <tr><td class="name"><a href="https://luma.com/vibe-space-0b4b" target="_blank" rel="noopener">Vibe Space SF</a></td><td>Frontier Tower, SF</td><td class="when">Oct 2025</td><td class="num">813+</td></tr>
+                <tr><td class="name"><a href="https://luma.com/vibe-week-b593" target="_blank" rel="noopener">VibeWeek Demo Day: Pitch to AI VCs</a></td><td>TechWeek SF</td><td class="when">Oct 2025</td><td class="num">494+</td></tr>
+                <tr><td class="name"><a href="https://luma.com/crypto-summit" target="_blank" rel="noopener">Viva City Crypto Summit</a></td><td>San Francisco</td><td class="when">2024</td><td class="num">400+</td></tr>
+                <tr><td class="name"><a href="https://luma.com/ai.summit" target="_blank" rel="noopener">Viva City AI Summit</a></td><td>San Francisco</td><td class="when">2024</td><td class="num">350+</td></tr>
+                <tr><td class="name"><a href="https://luma.com/vibe-week-6d71" target="_blank" rel="noopener">Vibe Space: Hacktoberfest</a></td><td>TechWeek SF</td><td class="when">Oct 2025</td><td class="num">325+</td></tr>
+                <tr><td class="name"><a href="https://luma.com/ethereum-at-frontiertower" target="_blank" rel="noopener">Ethereum is Coming Home</a></td><td>Frontier Tower, SF</td><td class="when">2024</td><td class="num">280+</td></tr>
+                <tr><td class="name"><a href="https://luma.com/build-on-aeternity-sf-hackathon-frontier" target="_blank" rel="noopener">Build on Aeternity Hackathon</a></td><td>Frontier Tower, SF</td><td class="when">Oct 2025</td><td class="num">244+</td></tr>
+                <tr><td class="name"><a href="https://luma.com/mcp-night-a96e" target="_blank" rel="noopener">MCP Demo Day</a></td><td>San Francisco</td><td class="when">Sep 2025</td><td class="num">180+</td></tr>
+                <tr><td class="name"><a href="https://luma.com/ai-infra-meetup" target="_blank" rel="noopener">AI/ML Infra Meetup</a></td><td>San Francisco</td><td class="when">Jul 2025</td><td class="num">160+</td></tr>
+                <tr><td class="name"><a href="https://luma.com/TokenizeAI-SF" target="_blank" rel="noopener">Tokenize! AI</a></td><td>TechWeek SF</td><td class="when">Oct 2025</td><td class="num">150+</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="hackathons">Hackathons organized or led: <b>omiHacks 2025</b> ($30K in prizes), <b>PL Genesis</b> ($250K+, global), <b>SensAI SF</b>, the <b>Aeternity Blockchain Hackathon</b> (lead organizer, 50+ developers mentored), and the <b>Akash &times; Solana Hackathon</b> ($15K, every entrant won a prize).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Community ============ -->
+    <section class="section" id="community">
+      <div class="wrap section__grid">
+        <div class="section__head">
+          <p class="eyebrow">Community</p>
+          <h2 class="section__title">Local clubs, <em>global reach</em></h2>
+          <p class="section__note">Programs that turn an audience into a network of people who ship.</p>
+        </div>
+        <div class="section__body">
+          <p class="lede" data-reveal>Dabl Club started as a meetup and became the developer relations company: 84,000 builders, city clubs in 20+ countries, and a team of DevRel engineers who run bootcamps, demo days, and grant support.</p>
+          <div class="community-stats" data-reveal>
+            <div class="stat"><div class="stat__num" data-count="84000" data-suffix="+">84,000+</div><div class="stat__label">Club members</div></div>
+            <div class="stat"><div class="stat__num" data-count="300" data-suffix="+">300+</div><div class="stat__label">Events organized</div></div>
+            <div class="stat"><div class="stat__num" data-count="20" data-suffix="+">20+</div><div class="stat__label">Countries</div></div>
+          </div>
+          <ul class="programs" data-reveal>
+            <li>
+              <span class="k">Dabl Club</span>
+              <h3><a class="t" href="https://dablclub.com/guilds" target="_blank" rel="noopener">City Clubs &amp; Guilds</a></h3>
+              <p>Local chapters from Lisbon to Jaipur, with weekly learning sessions, technical workshops, and curated resources across developer ecosystems.</p>
+            </li>
+            <li>
+              <span class="k">Omi</span>
+              <h3><a class="t" href="https://omiai.notion.site/ambassadors" target="_blank" rel="noopener">Omi AI Ambassadors</a></h3>
+              <p>Evangelists for an open-source AI wearable. Hackathon participation, developer onboarding, and demo content for technical audiences.</p>
+            </li>
+            <li>
+              <span class="k">Akash Network</span>
+              <h3><a class="t" href="https://www.prnewswire.com/news-releases/akash-launches-developer-grant-program-to-support-open-source-projects-and-decentralized-web-development-301347847.html" target="_blank" rel="noopener">Akash Community Grants</a></h3>
+              <p>A $3M grant program funding open-source projects on a decentralized cloud, from evaluation through ecosystem partnerships.</p>
+            </li>
+            <li>
+              <span class="k">Cloud Security Alliance &middot; 2025&ndash;2026</span>
+              <h3><a class="t" href="https://github.com/ModelContextProtocol-Security" target="_blank" rel="noopener">MCP Security Working Group</a></h3>
+              <p>Guidance, audit tooling, and vulnerability tracking for Model Context Protocol servers, built with the CSA community.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="marquee marquee--cities" aria-label="Dabl Club cities" style="margin-top: clamp(3rem, 6vw, 5rem); border-bottom: 0;">
+        <div class="marquee__track">
+          <ul class="marquee__list">
+            <li>San Francisco</li><li>New York City</li><li>Lisbon</li><li>Porto</li><li>Paris</li><li>Jaipur</li><li>Abuja</li><li>Lima</li><li>Taipei</li><li>Denver</li>
+          </ul>
+          <ul class="marquee__list" aria-hidden="true">
+            <li>San Francisco</li><li>New York City</li><li>Lisbon</li><li>Porto</li><li>Paris</li><li>Jaipur</li><li>Abuja</li><li>Lima</li><li>Taipei</li><li>Denver</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Voices ============ -->
+    <section class="section" id="voices" aria-label="What colleagues say">
+      <div class="wrap section__grid">
+        <div class="section__head">
+          <p class="eyebrow">Colleagues</p>
+          <h2 class="section__title">In their <em>words</em></h2>
+        </div>
+        <div class="section__body voices" data-reveal>
+          <blockquote>
+            <p>Colin is someone that gets sh*t done. He's not only resourceful, but can be trusted to deliver and own a product. This is the highest compliment I can give.</p>
+            <footer>Clemens Wan</footer>
+          </blockquote>
+          <blockquote>
+            <p>Simply put, things happened with Colin around, and he was always a pleasure to work with.</p>
+            <footer>Christopher Kocurek &middot; ConsenSys</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="contact" id="contact">
+      <div class="wrap contact__grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let's build something people <em>join</em>.</h2>
+          <p class="contact__deck">Developer relations, community programs, agent infrastructure, or technical content. If you are building for developers, I would like to hear about it.</p>
+          <div class="contact__cta">
+            <a class="btn btn--primary" data-magnetic href="https://calendar.app.google/Av3pXzUJz33SFM8o8" target="_blank" rel="noopener">
+              Book a call with Colin
+              <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+          </div>
+        </div>
+        <ul class="contact__links" data-reveal>
+          <li><a href="https://x.com/dablclaw" target="_blank" rel="noopener"><span class="k">X</span><span class="v">@dablclaw</span></a></li>
+          <li><a href="https://github.com/opencolin" target="_blank" rel="noopener"><span class="k">GitHub</span><span class="v">@opencolin</span></a></li>
+          <li><a href="https://www.linkedin.com/in/wifi" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">in/wifi</span></a></li>
+          <li><a href="https://t.me/colinai" target="_blank" rel="noopener"><span class="k">Telegram</span><span class="v">@colinai</span></a></li>
+          <li><a href="https://farcaster.xyz/colo" target="_blank" rel="noopener"><span class="k">Farcaster</span><span class="v">@colo</span></a></li>
+          <li><a href="https://colin.chat" target="_blank" rel="noopener"><span class="k">Portfolio</span><span class="v">colin.chat</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>&copy; 2026 Colin Lowenberg</span>
+      <span>San Francisco, California</span>
+      <span>No trackers. No cookies.</span>
+      <a href="https://github.com/opencolin/lowenberg.com" target="_blank" rel="noopener">Source on GitHub</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
