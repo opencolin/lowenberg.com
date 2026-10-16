@@ -9,6 +9,9 @@ index.html        page content and metadata
 css/styles.css    design tokens (dark-first, light counterpart) and layout
 js/main.js        theme toggle, SF clock, reveal, count-up, filters, hero canvas
 assets/           portrait, favicon, Open Graph image
+scripts/check.js  Playwright smoke test (screenshots, overflow, console, JSON-LD)
+scripts/og.py     regenerates assets/og.png
+HANDOFF.md        state of the project, conventions, and open items
 ```
 
 ## Run locally
