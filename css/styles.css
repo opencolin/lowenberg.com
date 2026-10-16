@@ -706,6 +706,10 @@ html.js .hero__fade--late { animation-delay: 0.75s; }
   line-height: 1.15;
 }
 .now p { color: var(--fg-2); font-size: 0.93rem; }
+/* With an odd number of roles the first (newest) one leads at full width,
+   so the hairline grid never shows an empty cell. */
+.now > li:first-child:nth-last-child(odd) { grid-column: 1 / -1; }
+.now > li:first-child:nth-last-child(odd) p { max-width: 64ch; }
 .now a { border-bottom: 1px solid var(--line-2); transition: border-color 0.3s; }
 .now a:hover { border-color: var(--accent); }
 @media (max-width: 640px) { .now { grid-template-columns: 1fr; } }
