@@ -1,6 +1,6 @@
 # Handoff: lowenberg.com
 
-Written 2026-10-16 for whoever picks this up next, human or agent. Everything below is verified against the repository at commit `a1fde9a` on branch `claude/zen-galileo-vxp351`.
+Written 2026-10-16 for whoever picks this up next, human or agent. Everything below is verified against the head of branch `claude/zen-galileo-vxp351` on that date.
 
 ## 1. Where things stand
 
@@ -8,7 +8,7 @@ Written 2026-10-16 for whoever picks this up next, human or agent. Everything be
 
 | Item | State |
 |---|---|
-| Branch | `claude/zen-galileo-vxp351` (three commits: `57f28b9` build, `6ba9ce7` AISA role, `a1fde9a` rebrand + reorder) |
+| Branch | `claude/zen-galileo-vxp351` (commits: `57f28b9` build, `6ba9ce7` AISA role, `a1fde9a` rebrand + reorder, `3656d28` handoff + scripts, then the hero clipping fix) |
 | Default branch | Also `claude/zen-galileo-vxp351`. The repo was empty when the first push landed, so GitHub made this branch the default. GitHub's configured default was `main`, but no `main` exists. |
 | Pull request | **None.** A PR cannot be opened from the default branch to itself. Colin was offered two options and has not chosen: (a) push `main` from this commit, set it as default, open a draft PR from this branch into it; (b) treat this branch as the site. Do not push `main` without his OK. |
 | Live domain | `lowenberg.com` currently 301-redirects to `lowenberg.replit.app`, a Vite/React build of the older portfolio (same app as `colin.chat`). Nothing in this repo is deployed yet. Hosting is undecided. |
@@ -21,7 +21,7 @@ Written 2026-10-16 for whoever picks this up next, human or agent. Everything be
 index.html        723 lines. All content and metadata. Sections in order:
                   hero (#hero) · ledger numbers · companies marquee · #now · #work ·
                   #projects · #talks · #events · #community · #voices · #contact · footer
-css/styles.css    1231 lines. Design tokens at the top, then one block per section.
+css/styles.css    1234 lines. Design tokens at the top, then one block per section.
 js/main.js        434 lines. Vanilla JS, IIFE, no dependencies.
 assets/colin.jpg  640×640 headshot (from colin.chat).
 assets/favicon.svg  Four-node network glyph in brass on ink.
@@ -53,14 +53,15 @@ Fonts load from Google Fonts in `index.html` head; every family has a real fallb
 
 **Conventions that will bite you if you don't know them**
 
-1. **Hairline grids and odd counts.** `ul.now`, `ul.programs`, and `ul.contact__links` draw their hairlines with `gap: 1px` and the container's `--line` background showing through. An odd item count in a two-column grid leaves a visibly filled empty cell. `ul.now` is protected by `.now > li:first-child:nth-last-child(odd) { grid-column: 1 / -1 }` (line 711), which makes the first card span full width when the count is odd. `programs` (4 items) and `contact__links` (6 items) are not protected; keep them even or add the same rule. `ul.projects__grid` uses per-item borders instead (line 821) precisely so filtering can leave ragged rows without a filled cell; it currently has 18 cards, which divides by both 3 and 2.
+1. **Hairline grids and odd counts.** `ul.now`, `ul.programs`, and `ul.contact__links` draw their hairlines with `gap: 1px` and the container's `--line` background showing through. An odd item count in a two-column grid leaves a visibly filled empty cell. `ul.now` is protected by `.now > li:first-child:nth-last-child(odd) { grid-column: 1 / -1 }` (line 714), which makes the first card span full width when the count is odd. `programs` (4 items) and `contact__links` (6 items) are not protected; keep them even or add the same rule. `ul.projects__grid` uses per-item borders instead (line 824) precisely so filtering can leave ragged rows without a filled cell; it currently has 18 cards, which divides by both 3 and 2.
 2. **Marquees are duplicated.** Each `.marquee__track` holds two identical `ul.marquee__list` elements (the second is `aria-hidden`) and animates `translateX(-50%)`. Any change to one list must be made to the other or the loop jumps. There are two marquees: companies (`index.html:197/200`) and Dabl Club cities (`:656/659`).
-3. **Scroll reveal.** Elements with `data-reveal` start at `opacity: 0` only when `html.js` is set and `html.no-reveal` is not (`styles.css:1208`). `js/main.js` adds `.in` on intersection and force-reveals everything after 6 s as a safety net. The artifact preview adds `no-reveal` so nothing is hidden in a thumbnail.
+3. **Scroll reveal.** Elements with `data-reveal` start at `opacity: 0` only when `html.js` is set and `html.no-reveal` is not (`styles.css:1211`). `js/main.js` adds `.in` on intersection and force-reveals everything after 6 s as a safety net. The artifact preview adds `no-reveal` so nothing is hidden in a thumbnail.
 4. **Count-up numbers.** `[data-count]` elements animate from 0 to `data-count` and append `data-suffix`. The text inside the element is the resting value and must already be the final number so the page is complete without JS.
 5. **Role order is mirrored in four places.** Hero "Now" list (`index.html:147`), `ul.now` cards (`:216`), the companies marquee (both copies), and the JSON-LD `worksFor` array (`:48`). Current order: Tenki by Luxor AI, AISA, Nebius, Dabl Club, Omi. Omi is intentionally absent from `worksFor` (an ambassador role, not employment).
 6. **Theme toggle.** `#theme-toggle` sets `data-theme` on `<html>` and stores it in `localStorage` (wrapped in try/catch). The sun/moon icon visibility is CSS-only (`styles.css:297–302`). The canvas re-reads `--fg` and `--accent` on a `themechange` event.
-7. **Reduced motion.** Everything animated has a `prefers-reduced-motion: reduce` fallback (`styles.css:1220`); the canvas draws one static frame.
+7. **Reduced motion.** Everything animated has a `prefers-reduced-motion: reduce` fallback (`styles.css:1223`); the canvas draws one static frame.
 8. **Buttons are 2px radius, not pills.** Cards have no radius. Keep it that way; it is part of the look.
+9. **Hero name clip box.** Each `.hero__line` is `overflow: hidden` so the name can rise into view. With `line-height: 0.92` the glyphs are taller than the line box, so the rule carries `padding: 0.18em 0.08em 0.14em 0` with matching negative margins (room for ascenders, descenders, and the italic overhang), and the rise starts at `translateY(140%)` so the span is fully hidden on the first frame. Colin reported clipped ascenders on "Colin" before this existed. If you change the display face, size, or line-height, re-check the hero at 2× DPR.
 
 ## 4. JavaScript (`js/main.js`)
 
@@ -117,7 +118,7 @@ python3 -m http.server 8123 --bind 127.0.0.1 &
 node scripts/check.js http://127.0.0.1:8123/ out/
 ```
 
-It renders desktop dark, desktop light, tablet, and phone; takes full-page screenshots; and fails loudly on console errors, failed requests, horizontal overflow, invalid JSON-LD, or a wrapped row in the hero "Now" list. In Claude cloud sessions Playwright is at `/opt/node-tools/node_modules` and Chromium at `/opt/pw-browsers/chromium`; the script tries those and falls back to a normal Playwright install. Last run (commit `a1fde9a`): no issues at any width.
+It renders desktop dark, desktop light, tablet, and phone; takes full-page screenshots; and fails loudly on console errors, failed requests, horizontal overflow, invalid JSON-LD, or a wrapped row in the hero "Now" list. In Claude cloud sessions Playwright is at `/opt/node-tools/node_modules` and Chromium at `/opt/pw-browsers/chromium`; the script tries those and falls back to a normal Playwright install. Last run (2026-10-16, after the hero clipping fix): no issues at any width.
 
 Things I checked by eye and consider settled: the hero at 1440/820/390 px in both themes, every section at desktop and phone, the projects grid with and without filters, the OG image.
 
@@ -143,4 +144,4 @@ Each is small and self-contained; none is required.
 
 ## 10. Commit conventions used
 
-Three commits so far, each with an imperative subject, a short body explaining the why, and the attribution trailer the session was given. Author identity on all three is Colin's. Keep commits scoped to one change each; the diff is the record and the PR (once there is one) is the thread.
+Every commit so far has an imperative subject, a short body explaining the why, and the attribution trailer the session was given. Author identity on all three is Colin's. Keep commits scoped to one change each; the diff is the record and the PR (once there is one) is the thread.
